@@ -10,7 +10,7 @@ export class CheckAccessDirective {
     @Input('checkAccess') roles: string;
 
     constructor(router: Router) {
-        let user: any = StorageService.get('user');
+        let user: any = StorageService.getSession('user');
 
         setTimeout(() => {
             if (this.roles.indexOf(user.role.sigla) == -1) {

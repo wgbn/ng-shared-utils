@@ -3,7 +3,7 @@
  */
 
 /* Services */
-export * from './lib/services/event-amitter.service';
+export * from './lib/services/event-emitter.service';
 export * from './lib/services/generic.service';
 export * from './lib/services/http-status.service';
 export * from './lib/services/storage.service';

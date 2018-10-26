@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Router} from "@angular/router";
 import {Observable} from "rxjs";
 import {StorageService} from "./storage.service";
 
@@ -12,7 +11,7 @@ export class HttpStatusService {
     private url: string = '';
     private loginPage: string = '';
 
-    constructor(private http: HttpClient, private router: Router) { }
+    constructor(private http: HttpClient) { }
 
     configure(url: string, loginPage: string) {
         this.url = url;
@@ -29,7 +28,7 @@ export class HttpStatusService {
 
     private getToken() {
         let user = StorageService.getSession('user');
-        return user === null ? null : JSON.parse(user).jwt;
+        return user === null ? null : user.jwt;
     }
 
     private setUrlToken(url, auth) {

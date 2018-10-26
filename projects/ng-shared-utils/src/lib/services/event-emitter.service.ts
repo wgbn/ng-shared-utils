@@ -3,7 +3,7 @@ import {EventEmitter, Injectable} from '@angular/core';
 @Injectable({
     providedIn: 'root'
 })
-export class EventAmitterService {
+export class EventEmitterService {
 
     private static emitters: {
         [nomeEvento: string]: EventEmitter<any>

@@ -9,7 +9,7 @@ export class CheckRoleDirective {
     @Input('checkRole') roles: string;
 
     constructor(el: ElementRef, renderer: Renderer2) {
-        let user: any = StorageService.get('user');
+        let user: any = StorageService.getSession('user');
 
         setTimeout(() => {
             if (user !== null && this.roles.indexOf(user.role.sigla) == -1) {

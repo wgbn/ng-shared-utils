@@ -14,13 +14,13 @@ export class MascaraDirective implements ControlValueAccessor {
     onTouched: any;
     onChange: any;
 
-    @Input() cdoMascara: string;
+    @Input() nsuMascara: string;
 
     constructor(private el: ElementRef) { }
 
     @HostListener('keyup', ['$event'])
     onKeyUp($event: any) {
-        if (this.cdoMascara) {
+        if (this.nsuMascara) {
             let valor = $event.target.value.replace(/\D/g, '');
 
             // retorna caso pressionado backspace
@@ -29,7 +29,7 @@ export class MascaraDirective implements ControlValueAccessor {
                 return;
             }
 
-            let pad = this.cdoMascara.replace(/\D/g, '').replace(/9/g, '_');
+            let pad = this.nsuMascara.replace(/\D/g, '').replace(/9/g, '_');
             if (valor.length <= pad.length) {
                 this.onChange(valor);
             }
@@ -40,7 +40,7 @@ export class MascaraDirective implements ControlValueAccessor {
 
     @HostListener('blur', ['$event'])
     onBlur($event: any) {
-        if ($event.target.value.length === this.cdoMascara.length) {
+        if ($event.target.value.length === this.nsuMascara.length) {
             return;
         }
         this.onChange('');
@@ -57,14 +57,14 @@ export class MascaraDirective implements ControlValueAccessor {
 
     aplicarMascara(valor: string): string {
         valor = valor.replace(/\D/g, '');
-        let pad = this.cdoMascara.replace(/\D/g, '').replace(/9/g, '_');
+        let pad = this.nsuMascara.replace(/\D/g, '').replace(/9/g, '_');
         let valorMask = valor + pad.substring(0, pad.length - valor.length);
         let valorMaskPos = 0;
 
         valor = '';
-        for (let i = 0; i < this.cdoMascara.length; i++) {
-            if (isNaN(parseInt(this.cdoMascara.charAt(i)))) {
-                valor += this.cdoMascara.charAt(i);
+        for (let i = 0; i < this.nsuMascara.length; i++) {
+            if (isNaN(parseInt(this.nsuMascara.charAt(i)))) {
+                valor += this.nsuMascara.charAt(i);
             } else {
                 valor += valorMask[valorMaskPos++];
             }

@@ -1,6 +1,6 @@
 {
     "name": "ng-shared-utils",
-    "version": "1.0.0",
+    "version": "1.0.4",
     "description": "Uma biblioteca Angular com componentes e serviços comuns",
     "keywords": ["angular", "library", "shared"],
     "license": "SEE LICENSE IN LICENSE",
