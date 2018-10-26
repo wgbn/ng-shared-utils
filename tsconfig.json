@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-shared-utils": [
+        "dist/ng-shared-utils"
+      ],
+      "ng-shared-utils/*": [
+        "dist/ng-shared-utils/*"
+      ]
+    }
   }
 }

@@ -1,0 +1,16 @@
+{
+    "name": "ng-shared-utils",
+    "version": "1.0.0",
+    "description": "Uma biblioteca Angular com componentes e serviços comuns",
+    "keywords": ["angular", "library", "shared"],
+    "license": "SEE LICENSE IN LICENSE",
+    "repository": {
+        "type" : "git",
+        "url" : "https://github.com/wgbn/ng-shared-utils"
+    },
+    "homepage": "https://github.com/wgbn/ng-shared-utils",
+    "peerDependencies": {
+        "@angular/common": "^7.0.0",
+        "@angular/core": "^7.0.0"
+    }
+}

@@ -1,0 +1,33 @@
+# ng-shared-utils
+
+Esta é uma simples biblioteca Angular com os seguintes components:
+
+## Services
+- EventEmitterService
+- GenericService
+- HttpStatusService
+- StorageService
+
+## Components
+- LoadingComponent
+- PageLoaderComponent
+
+## Decorators
+- LoadingDecorator
+
+## Directives
+- CheckAccessDirective
+- CheckRoleDirective
+- MascaraDirective
+- NoLinkDirective
+
+## Instalação
+
+`npm install --save ng-shared-utils`
+
+## Dependências
+
+Esta biblioteca utiliza a FontAwesome 4.7.0, instale com o comando
+`npm install --save font-awesome@4.7.0`
+
+Após a instalação, configure corretamente o FontAwesome em seu app angular
