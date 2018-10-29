@@ -1,11 +1,11 @@
-import {Directive, ElementRef, Renderer2} from '@angular/core';
+import {Directive, ElementRef} from '@angular/core';
 
 @Directive({
     selector: '[noLink]'
 })
 export class NoLinkDirective {
 
-    constructor(el: ElementRef, renderer: Renderer2) {
+    constructor(el: ElementRef) {
         setTimeout(() => {
             el.nativeElement.addEventListener('click', e => e.preventDefault());
         }, 50);
